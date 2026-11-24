@@ -5,15 +5,19 @@
 ========================================= */
 
 
-/* 1. GLOBAL THEME */
+/* =========================================
+   1. GLOBAL THEME
+========================================= */
 
 :root {
     --green: #111710;
     --green-light: #151D14;
     --green-dark: #0C120C;
+
     --gold: #C9AD76;
     --ivory: #F1E6D0;
     --muted: #B8AE9B;
+
     --border: rgba(201, 173, 118, 0.25);
 }
 
@@ -32,6 +36,7 @@ body {
     background: var(--green);
     color: var(--ivory);
     font-family: 'DM Sans', Arial, sans-serif;
+    overflow-x: hidden;
 }
 
 section {
@@ -44,17 +49,23 @@ img {
 }
 
 
-/* 2. NAVIGATION BAR */
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 22px 7%;
+
     background: var(--green);
+
     position: sticky;
     top: 0;
     z-index: 1000;
+
     border-bottom: 1px solid var(--border);
 }
 
@@ -93,13 +104,17 @@ img {
 }
 
 
-/* 3. HERO SECTION */
+/* =========================================
+   3. HERO SECTION
+========================================= */
 
 .hero {
     position: relative;
     min-height: calc(100vh - 80px);
+
     display: flex;
     align-items: center;
+
     padding: 80px 10%;
 
     background:
@@ -202,13 +217,17 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 15px;
+
     background: var(--gold);
     color: var(--green);
+
     padding: 17px 25px;
     margin-top: 35px;
+
     text-decoration: none;
     font-size: 11px;
     letter-spacing: 2px;
+
     transition: 0.4s;
 }
 
@@ -226,9 +245,11 @@ img {
     bottom: 30px;
     right: 8%;
     z-index: 2;
+
     display: flex;
     align-items: center;
     gap: 15px;
+
     color: var(--gold);
     font-size: 10px;
     letter-spacing: 2px;
@@ -242,7 +263,9 @@ img {
 }
 
 
-/* 4. GENERAL SECTION STYLING */
+/* =========================================
+   4. GENERAL SECTION STYLING
+========================================= */
 
 section:not(.hero) {
     min-height: 70vh;
@@ -274,7 +297,9 @@ section h2 {
 }
 
 
-/* 5. ISLAMIC BLESSING SECTION */
+/* =========================================
+   5. ISLAMIC BLESSING STYLES
+========================================= */
 
 .islamic-blessing {
     background: var(--green);
@@ -325,7 +350,9 @@ section h2 {
 }
 
 
-/* 6. INTRODUCTION SECTION */
+/* =========================================
+   6. INTRODUCTION SECTION
+========================================= */
 
 .introduction {
     background: var(--green-light);
@@ -361,7 +388,9 @@ section h2 {
 }
 
 
-/* 7. LOVE STORY SECTION */
+/* =========================================
+   7. LOVE STORY SECTION
+========================================= */
 
 .love-story {
     background: var(--green);
@@ -386,7 +415,9 @@ section h2 {
 }
 
 
-/* 8. CELEBRATIONS SECTION */
+/* =========================================
+   8. CELEBRATIONS SECTION
+========================================= */
 
 .celebrations {
     background: var(--green-light);
@@ -474,7 +505,9 @@ section h2 {
 }
 
 
-/* 9. MEMORIES / PHOTO GALLERY */
+/* =========================================
+   9. MEMORIES / PHOTO GALLERY
+========================================= */
 
 .memories {
     background: var(--green);
@@ -505,70 +538,151 @@ section h2 {
 }
 
 
-/* 10. GUESTBOOK SECTION */
+/* =========================================
+   10. WEDDING LOCATIONS & WISHES
+========================================= */
 
-.guestbook {
+.locations-section {
     background: var(--green-light);
+    padding: 110px 7%;
+    text-align: center;
 }
 
-.wishes-form {
-    max-width: 600px;
-    margin: 45px auto 0;
+.locations-section h2 {
+    margin-bottom: 20px;
+}
+
+.location-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 55px auto 0;
+}
+
+.location-card {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
+    align-items: center;
 
-.wishes-form input,
-.wishes-form textarea {
-    width: 100%;
-    padding: 18px;
-    background: transparent;
-    color: var(--ivory);
+    padding: 40px 22px;
+
     border: 1px solid var(--border);
-    outline: none;
-    font-family: inherit;
-    font-size: 14px;
+    background: rgba(201, 173, 118, 0.04);
+
+    transition: 0.4s ease;
 }
 
-.wishes-form input:focus,
-.wishes-form textarea:focus {
+.location-card:hover {
+    transform: translateY(-7px);
     border-color: var(--gold);
 }
 
-.wishes-form textarea {
-    min-height: 150px;
-    resize: vertical;
+.location-icon {
+    color: var(--gold);
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-.wishes-form input::placeholder,
-.wishes-form textarea::placeholder {
+.location-card h3 {
+    color: var(--ivory);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 29px;
+    font-weight: 400;
+    margin: 18px 0;
+}
+
+.location-description {
     color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 70px;
 }
 
-.wishes-form button {
+.qr-frame {
+    width: 175px;
+    height: 175px;
+
+    background: #FFFFFF;
+    padding: 10px;
+
+    margin: 25px auto 15px;
+
+    border: 1px solid var(--gold);
+    border-radius: 3px;
+}
+
+.qr-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.qr-instruction {
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 2px;
+    line-height: 1.8;
+    margin: 15px 0 20px;
+}
+
+.location-button {
+    display: inline-block;
+
     background: var(--gold);
     color: var(--green);
-    border: none;
-    padding: 17px;
-    font-size: 12px;
-    letter-spacing: 2px;
-    cursor: pointer;
+
+    text-decoration: none;
+    padding: 14px 18px;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+
     transition: 0.3s;
+    margin-top: 10px;
 }
 
-.wishes-form button:hover {
+.location-button:hover {
     background: var(--ivory);
+    transform: translateY(-3px);
 }
 
-.wish-status {
-    margin-top: 20px;
+/* WISHES CARD */
+
+.wishes-card {
+    justify-content: center;
+}
+
+.wishes-decoration {
     color: var(--gold);
+    font-size: 35px;
+    margin: 25px 0;
+}
+
+.wishes-message {
+    color: var(--ivory);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    max-width: 260px;
+}
+
+.locations-footer {
+    color: var(--gold);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    margin-top: 55px;
     line-height: 1.8;
 }
 
 
-/* 11. FOOTER */
+/* =========================================
+   11. FOOTER
+========================================= */
 
 .footer {
     padding: 75px 20px;
@@ -628,7 +742,9 @@ section h2 {
 }
 
 
-/* 12. COUNTDOWN */
+/* =========================================
+   12. COUNTDOWN
+========================================= */
 
 .countdown {
     display: flex;
@@ -656,7 +772,17 @@ section h2 {
 }
 
 
-/* 13. MOBILE RESPONSIVE DESIGN */
+/* =========================================
+   13. MOBILE RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 900px) {
+
+    .location-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
 
 @media (max-width: 768px) {
 
@@ -798,10 +924,24 @@ section h2 {
         font-size: 28px;
     }
 
+    .location-container {
+        grid-template-columns: 1fr;
+    }
+
+    .location-card {
+        padding: 35px 20px;
+    }
+
+    .location-card h3 {
+        font-size: 27px;
+    }
+
 }
 
 
-/* 14. SMALL MOBILE SCREENS */
+/* =========================================
+   14. SMALL MOBILE SCREENS
+========================================= */
 
 @media (max-width: 400px) {
 
@@ -835,6 +975,15 @@ section h2 {
     }
 
     .bismillah {
+        font-size: 25px;
+    }
+
+    .qr-frame {
+        width: 160px;
+        height: 160px;
+    }
+
+    .location-card h3 {
         font-size: 25px;
     }
 

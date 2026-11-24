@@ -13,7 +13,7 @@ console.log("Welcome to Shameeda & Masthan Vali Wedding Website!");
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener('click', function (event) {
+    link.addEventListener('click', function(event) {
 
         const targetId = this.getAttribute('href');
 
@@ -43,7 +43,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // 2. HERO SECTION ANIMATION
 // ========================================
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
 
     const heroContent = document.querySelector(".hero-content");
 
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // ========================================
 
 // Wedding date: 13 December 2026
-// Countdown currently targets midnight at the start
+// Countdown currently targets midnight at the beginning
 // of the date in the visitor's local timezone.
 // Update the time when the ceremony timing is confirmed.
 
@@ -92,6 +92,9 @@ function updateCountdown() {
     const minutesElement = document.getElementById("minutes");
     const secondsElement = document.getElementById("seconds");
 
+
+    // Check whether the wedding day has arrived
+
     if (difference <= 0) {
 
         if (daysElement) daysElement.textContent = "00";
@@ -102,6 +105,9 @@ function updateCountdown() {
         return;
 
     }
+
+
+    // Calculate remaining time
 
     const days = Math.floor(
         difference / (1000 * 60 * 60 * 24)
@@ -119,6 +125,9 @@ function updateCountdown() {
         (difference / 1000) % 60
     );
 
+
+    // Display countdown
+
     if (daysElement) daysElement.textContent = days;
     if (hoursElement) hoursElement.textContent = hours;
     if (minutesElement) minutesElement.textContent = minutes;
@@ -127,64 +136,91 @@ function updateCountdown() {
 }
 
 
-// Start countdown
+// Start countdown immediately
+
 updateCountdown();
 
-setInterval(updateCountdown, 1000);
+
+// Update countdown every second
+
+const countdownInterval = setInterval(updateCountdown, 1000);
 
 
 // ========================================
-// 4. GUEST WISHES FORM
+// 4. WEDDING LOCATION LINKS
 // ========================================
 
-const wishesForm = document.getElementById("wishesForm");
+// Nikah Google Maps location
+const nikahLocation =
+    "https://maps.app.goo.gl/UHwRNa9VWMEN8zhV7";
 
-if (wishesForm) {
 
-    wishesForm.addEventListener("submit", function (event) {
+// Walima Google Maps location
+// Currently using the same link supplied earlier.
+// Replace it if the Walima venue has a different location.
 
-        event.preventDefault();
+const walimaLocation =
+    "https://maps.app.goo.gl/4MRmD8zJzu9mSnJh6";
 
-        const guestName =
-            document.getElementById("guestName").value.trim();
 
-        const guestMessage =
-            document.getElementById("guestMessage").value.trim();
+console.log("Nikah Location:", nikahLocation);
+console.log("Walima Location:", walimaLocation);
 
-        const wishStatus =
-            document.getElementById("wishStatus");
 
-        if (!guestName || !guestMessage) {
+// ========================================
+// 5. WEDDING WISHES GOOGLE FORM
+// ========================================
 
-            wishStatus.textContent =
-                "Please fill in all fields.";
+// The wishes button is an ordinary HTML link.
+// It opens the Google Form in a new tab.
+//
+// IMPORTANT:
+// Replace this Maps URL with your actual
+// Google Forms sharing link in index.html.
 
-            return;
+const wishesFormLink =
+    "https://maps.app.goo.gl/4MRmD8zJzu9mSnJh6";
 
-        }
+console.log("Wedding Wishes Link:", wishesFormLink);
 
-        const wish = {
-            name: guestName,
-            message: guestMessage,
-            date: new Date().toLocaleString()
-        };
 
-        // Display the submitted wish in the console
-        console.log("New Wedding Wish:", wish);
+// ========================================
+// 6. CHECK QR CODE IMAGES
+// ========================================
 
-        wishStatus.textContent =
-            "Thank you, " + guestName +
-            "! May Allah bless you. Your duas mean a lot to us.";
+document.addEventListener("DOMContentLoaded", function() {
 
-        wishesForm.reset();
+    const qrImages = document.querySelectorAll(".qr-frame img");
+
+    qrImages.forEach(function(image) {
+
+        image.addEventListener("error", function() {
+
+            console.error(
+                "QR code image could not be loaded:",
+                image.getAttribute("src")
+            );
+
+        });
+
+        image.addEventListener("load", function() {
+
+            console.log(
+                "QR code loaded successfully:",
+                image.getAttribute("src")
+            );
+
+        });
 
     });
 
-}
+});
 
 
 // ========================================
-// 5. WEBSITE LOADED
+// 7. WEBSITE LOADED SUCCESSFULLY
 // ========================================
 
-console.log("Wedding Website JavaScript Loaded Successfully!");
+console.log(
+    "Shameeda & Masthan Vali Wedding Website Loaded Successfully!"
+);
