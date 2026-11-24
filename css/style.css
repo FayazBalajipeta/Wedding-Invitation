@@ -1,990 +1,2005 @@
 
+
 /* =========================================
+
    SHAMEEDA & MASTHAN VALI WEDDING WEBSITE
-   THEME: DARK GREEN + CHAMPAGNE GOLD
+
+   THEME: ROYAL PLUM + GOLD
+
 ========================================= */
+
+
+
 
 
 /* =========================================
+
    1. GLOBAL THEME
+
 ========================================= */
+
+
+
+
+
+
 
 :root {
-    --green: #111710;
-    --green-light: #151D14;
-    --green-dark: #0C120C;
 
-    --gold: #C9AD76;
-    --ivory: #F1E6D0;
-    --muted: #B8AE9B;
+    --burgundy: #201522;
 
-    --border: rgba(201, 173, 118, 0.25);
+    --burgundy-deep: #130D17;
+
+    --burgundy-soft: #38243B;
+
+
+
+    --gold: #D8B477;
+
+    --gold-light: #EBD5AC;
+
+
+
+    --ivory: #FFF5E8;
+
+    --cream: #F5EBDD;
+
+
+
+    --rose: #C9A0A8;
+
+    --text: #F5EBDD;
+
+    --muted: #C9BAC9;
+
+
+
+    --dark-text: #302333;
+
+    /* Compatibility names used throughout this existing stylesheet */
+    --green: #201522;
+    --green-light: #38243B;
+    --green-dark: #130D17;
+    --border: rgba(216, 180, 119, 0.35);
+
 }
+
+
+
+
+
+
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
+
+
 
 html {
+
     scroll-behavior: smooth;
+
     scroll-padding-top: 90px;
+
 }
+
+
 
 body {
+
     background: var(--green);
+
     color: var(--ivory);
+
     font-family: 'DM Sans', Arial, sans-serif;
+
     overflow-x: hidden;
+
 }
+
+
 
 section {
+
     width: 100%;
+
 }
 
+
+
 img {
+
     max-width: 100%;
+
     display: block;
+
 }
+
+
+
 
 
 /* =========================================
+
    2. NAVIGATION BAR
+
 ========================================= */
 
+
+
 .navbar {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
+
 
     padding: 22px 7%;
 
+
+
     background: var(--green);
 
+
+
     position: sticky;
+
     top: 0;
+
     z-index: 1000;
 
+
+
     border-bottom: 1px solid var(--border);
+
 }
+
+
 
 .logo {
+
     color: var(--gold);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 30px;
+
     text-decoration: none;
+
 }
+
+
 
 .logo span {
+
     color: var(--ivory);
+
 }
+
+
 
 .nav-links {
+
     display: flex;
+
     align-items: center;
+
     gap: 28px;
+
 }
+
+
 
 .nav-links a {
+
     color: var(--ivory);
+
     text-decoration: none;
+
     font-size: 13px;
+
     transition: 0.3s;
+
 }
+
+
 
 .nav-links a:hover {
+
     color: var(--gold);
+
 }
 
+
+
 .nav-date {
+
     color: var(--gold);
+
     font-size: 12px;
+
     letter-spacing: 2px;
+
 }
+
+
+
 
 
 /* =========================================
+
    3. HERO SECTION
+
 ========================================= */
 
+
+
 .hero {
+
     position: relative;
+
     min-height: calc(100vh - 80px);
 
+
+
     display: flex;
+
     align-items: center;
+
+
 
     padding: 80px 10%;
 
+
+
     background:
+
         url('../images/hero.jpg') center/cover no-repeat;
 
+
+
     overflow: hidden;
+
 }
+
+
 
 .hero-overlay {
+
     position: absolute;
+
     inset: 0;
 
+
+
     background: linear-gradient(
+
         90deg,
-        rgba(17, 23, 16, 0.94),
-        rgba(17, 23, 16, 0.78),
-        rgba(17, 23, 16, 0.30)
+
+        rgba(19, 13, 23, 0.94),
+
+        rgba(32, 21, 34, 0.78),
+
+        rgba(19, 13, 23, 0.30)
+
     );
 
+
+
     z-index: 1;
+
 }
+
+
 
 .hero-content {
+
     position: relative;
+
     z-index: 2;
+
     max-width: 680px;
+
 }
+
+
 
 .hero-subtitle {
+
     color: var(--gold);
+
     font-family: 'Noto Naskh Arabic', serif;
+
     font-size: 25px;
+
     margin-bottom: 25px;
+
 }
+
+
 
 .hero-small-text {
+
     font-size: 10px;
+
     letter-spacing: 4px;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .couple-names {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: clamp(55px, 8vw, 105px);
+
     font-weight: 400;
+
     line-height: 1.1;
+
     color: var(--ivory);
+
 }
+
+
 
 .couple-names span {
+
     display: block;
+
     color: var(--gold);
+
     font-size: 50px;
+
     font-style: italic;
+
     margin: 8px 0;
+
 }
+
+
 
 .hero-description {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 20px;
+
     font-style: italic;
+
     line-height: 1.7;
+
     margin-top: 25px;
+
 }
+
+
 
 .hero-divider {
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     width: 150px;
+
     margin: 30px 0;
+
 }
+
+
 
 .hero-divider span {
+
     flex: 1;
+
     height: 1px;
+
     background: var(--gold);
+
 }
+
+
 
 .hero-divider i {
+
     color: var(--gold);
+
     font-style: normal;
+
 }
+
+
 
 .hero-date {
+
     color: var(--gold);
+
     font-size: 13px;
+
     letter-spacing: 4px;
+
     margin-bottom: 12px;
+
 }
+
+
 
 .hero-location {
+
     color: var(--ivory);
+
     font-size: 10px;
+
     letter-spacing: 3px;
+
     line-height: 1.8;
+
 }
+
+
 
 .hero-button {
+
     display: inline-flex;
+
     align-items: center;
+
     gap: 15px;
 
+
+
     background: var(--gold);
+
     color: var(--green);
 
+
+
     padding: 17px 25px;
+
     margin-top: 35px;
 
+
+
     text-decoration: none;
+
     font-size: 11px;
+
     letter-spacing: 2px;
+
+
 
     transition: 0.4s;
+
 }
+
+
 
 .hero-button:hover {
+
     background: var(--ivory);
+
     transform: translateY(-4px);
+
 }
+
+
 
 .hero-button span {
+
     font-size: 18px;
+
 }
+
+
 
 .scroll-indicator {
+
     position: absolute;
+
     bottom: 30px;
+
     right: 8%;
+
     z-index: 2;
 
+
+
     display: flex;
+
     align-items: center;
+
     gap: 15px;
 
+
+
     color: var(--gold);
+
     font-size: 10px;
+
     letter-spacing: 2px;
+
     text-decoration: none;
+
 }
+
+
 
 .scroll-line {
+
     width: 40px;
+
     height: 1px;
+
     background: var(--gold);
+
 }
 
 
+
+
+
 /* =========================================
+
    4. GENERAL SECTION STYLING
+
 ========================================= */
+
+
 
 section:not(.hero) {
+
     min-height: 70vh;
+
     padding: 110px 10%;
+
     text-align: center;
+
 }
+
+
 
 section h2 {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 48px;
+
     font-weight: 400;
+
     color: var(--gold);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .section-subtitle {
+
     color: var(--gold);
+
     font-size: 10px;
+
     letter-spacing: 4px;
+
     margin-bottom: 22px;
+
 }
+
+
 
 .section-description {
+
     max-width: 650px;
+
     margin: 0 auto;
+
     color: var(--muted);
+
     font-size: 15px;
+
     line-height: 1.9;
+
 }
 
 
+
+
+
 /* =========================================
+
    5. ISLAMIC BLESSING STYLES
+
 ========================================= */
+
+
 
 .islamic-blessing {
+
     background: var(--green);
+
     padding: 100px 10%;
+
     border-top: 1px solid var(--border);
+
     border-bottom: 1px solid var(--border);
+
 }
+
+
 
 .bismillah {
+
     color: var(--gold);
+
     font-family: 'Noto Naskh Arabic', serif;
+
     font-size: 38px;
+
     line-height: 1.8;
+
     margin-bottom: 25px;
+
 }
+
+
 
 .blessing-divider {
+
     color: var(--gold);
+
     font-size: 24px;
+
     margin: 20px 0;
+
 }
+
+
 
 .quran-reference {
+
     color: var(--gold);
+
     font-size: 10px;
+
     letter-spacing: 4px;
+
     margin: 25px 0;
+
 }
+
+
 
 .quran-arabic {
+
     color: var(--ivory);
+
     font-family: 'Noto Naskh Arabic', serif;
+
     font-size: 30px;
+
     font-weight: 500;
+
     line-height: 2;
+
     max-width: 900px;
+
     margin: 30px auto;
+
 }
+
+
 
 .quran-translation {
+
     color: var(--ivory);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 19px;
+
     font-style: italic;
+
     line-height: 1.9;
+
     max-width: 650px;
+
     margin: 25px auto;
+
 }
 
 
+
+
+
 /* =========================================
+
    6. INTRODUCTION SECTION
+
 ========================================= */
+
+
 
 .introduction {
+
     background: var(--green-light);
+
 }
+
+
 
 .couple-intro {
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 65px;
+
     margin-top: 65px;
+
 }
+
+
 
 .couple-intro h3 {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 35px;
+
     font-weight: 400;
+
     color: var(--ivory);
+
 }
+
+
 
 .couple-intro p {
+
     color: var(--gold);
+
     margin-top: 12px;
+
     letter-spacing: 2px;
+
     font-size: 12px;
+
 }
+
+
 
 .ampersand {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     color: var(--gold);
+
     font-size: 45px;
+
     font-style: italic;
+
 }
 
 
+
+
+
 /* =========================================
+
    7. LOVE STORY SECTION
+
 ========================================= */
+
+
 
 .love-story {
+
     background: var(--green);
+
 }
+
+
 
 .story-image {
+
     max-width: 750px;
+
     margin: 55px auto 0;
+
     overflow: hidden;
+
     border: 1px solid var(--border);
+
 }
+
+
 
 .story-image img {
+
     width: 100%;
+
     height: 430px;
+
     object-fit: cover;
+
     transition: transform 0.6s;
+
 }
+
+
 
 .story-image:hover img {
+
     transform: scale(1.04);
+
 }
 
 
+
+
+
 /* =========================================
+
    8. CELEBRATIONS SECTION
+
 ========================================= */
+
+
 
 .celebrations {
+
     background: var(--green-light);
+
 }
+
+
 
 .celebration-intro {
+
     margin-bottom: 55px;
+
 }
+
+
 
 .events-container {
+
     display: grid;
+
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     gap: 30px;
+
     max-width: 1000px;
+
     margin: 0 auto;
+
 }
+
+
 
 .event-card {
+
     padding: 50px 35px;
+
     border: 1px solid var(--border);
+
     background: rgba(201, 173, 118, 0.04);
+
     transition: 0.4s ease;
+
 }
+
+
 
 .event-card:hover {
+
     transform: translateY(-8px);
+
     border-color: var(--gold);
+
 }
+
+
 
 .event-symbol {
+
     font-size: 42px;
+
     color: var(--gold);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .event-subtitle {
+
     color: var(--gold);
+
     letter-spacing: 3px;
+
     font-size: 10px;
+
     line-height: 1.8;
+
     margin-bottom: 18px;
+
 }
+
+
 
 .event-card h3 {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 32px;
+
     font-weight: 400;
+
     color: var(--ivory);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .event-description {
+
     color: var(--muted);
+
     line-height: 1.8;
+
     min-height: 85px;
+
     font-size: 14px;
+
 }
+
+
 
 .event-divider {
+
     color: var(--gold);
+
     margin: 25px 0;
+
 }
+
+
 
 .event-detail {
+
     color: var(--gold);
+
     font-size: 10px;
+
     letter-spacing: 3px;
+
     margin-top: 20px;
+
     margin-bottom: 8px;
+
 }
+
+
 
 .event-value {
+
     color: var(--ivory);
+
     font-size: 14px;
+
     line-height: 1.7;
+
 }
+
+
 
 .celebration-footer {
+
     color: var(--gold);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-style: italic;
+
     margin-top: 55px;
+
     font-size: 19px;
+
     line-height: 1.8;
+
 }
 
 
+
+
+
 /* =========================================
+
    9. MEMORIES / PHOTO GALLERY
+
 ========================================= */
+
+
 
 .memories {
+
     background: var(--green);
+
 }
+
+
 
 .gallery {
+
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 25px;
+
     max-width: 1000px;
+
     margin: 55px auto 0;
+
 }
+
+
 
 .gallery-item {
+
     overflow: hidden;
+
     border: 1px solid var(--border);
+
 }
+
+
 
 .gallery-item img {
+
     width: 100%;
+
     height: 350px;
+
     object-fit: cover;
+
     transition: transform 0.6s;
+
 }
 
+
+
 .gallery-item:hover img {
+
     transform: scale(1.07);
+
 }
+
+
+
 
 
 /* =========================================
+
    10. WEDDING LOCATIONS & WISHES
+
 ========================================= */
 
+
+
 .locations-section {
+
     background: var(--green-light);
+
     padding: 110px 7%;
+
     text-align: center;
+
 }
+
+
 
 .locations-section h2 {
+
     margin-bottom: 20px;
+
 }
+
+
 
 .location-container {
+
     display: grid;
+
     grid-template-columns: repeat(3, minmax(0, 1fr));
+
     gap: 25px;
 
+
+
     max-width: 1200px;
+
     margin: 55px auto 0;
+
 }
 
+
+
 .location-card {
+
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
+
 
     padding: 40px 22px;
 
+
+
     border: 1px solid var(--border);
+
     background: rgba(201, 173, 118, 0.04);
 
+
+
     transition: 0.4s ease;
+
 }
+
+
 
 .location-card:hover {
+
     transform: translateY(-7px);
+
     border-color: var(--gold);
+
 }
+
+
 
 .location-icon {
+
     color: var(--gold);
+
     font-size: 40px;
+
     margin-bottom: 20px;
+
 }
+
+
 
 .location-card h3 {
+
     color: var(--ivory);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 29px;
+
     font-weight: 400;
+
     margin: 18px 0;
+
 }
+
+
 
 .location-description {
+
     color: var(--muted);
+
     font-size: 13px;
+
     line-height: 1.8;
+
     min-height: 70px;
+
 }
 
+
+
 .qr-frame {
+
     width: 175px;
+
     height: 175px;
 
+
+
     background: #FFFFFF;
+
     padding: 10px;
+
+
 
     margin: 25px auto 15px;
 
+
+
     border: 1px solid var(--gold);
+
     border-radius: 3px;
+
 }
+
+
 
 .qr-frame img {
+
     width: 100%;
+
     height: 100%;
+
     object-fit: contain;
+
 }
+
+
 
 .qr-instruction {
+
     color: var(--gold);
+
     font-size: 9px;
+
     letter-spacing: 2px;
+
     line-height: 1.8;
+
     margin: 15px 0 20px;
+
 }
+
+
 
 .location-button {
+
     display: inline-block;
 
+
+
     background: var(--gold);
+
     color: var(--green);
 
+
+
     text-decoration: none;
+
     padding: 14px 18px;
 
+
+
     font-size: 10px;
+
     letter-spacing: 1px;
 
+
+
     transition: 0.3s;
+
     margin-top: 10px;
+
 }
 
+
+
 .location-button:hover {
+
     background: var(--ivory);
+
     transform: translateY(-3px);
+
 }
+
+
 
 /* WISHES CARD */
 
+
+
 .wishes-card {
+
     justify-content: center;
+
 }
+
+
 
 .wishes-decoration {
+
     color: var(--gold);
+
     font-size: 35px;
+
     margin: 25px 0;
+
 }
+
+
 
 .wishes-message {
+
     color: var(--ivory);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-style: italic;
+
     font-size: 17px;
+
     line-height: 1.8;
+
     margin-bottom: 25px;
+
     max-width: 260px;
+
 }
+
+
 
 .locations-footer {
+
     color: var(--gold);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-style: italic;
+
     font-size: 18px;
+
     margin-top: 55px;
+
     line-height: 1.8;
+
 }
 
 
+
+
+
 /* =========================================
+
    11. FOOTER
+
 ========================================= */
+
+
 
 .footer {
+
     padding: 75px 20px;
+
     text-align: center;
+
     background: var(--green-dark);
+
     border-top: 1px solid var(--border);
+
     color: var(--ivory);
+
 }
+
+
 
 .footer-bismillah {
+
     color: var(--gold);
+
     font-family: 'Noto Naskh Arabic', serif;
+
     font-size: 25px;
+
     margin-bottom: 25px;
+
 }
+
+
 
 .footer-logo {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 40px;
+
     color: var(--gold);
+
     margin-bottom: 20px;
+
 }
+
+
 
 .footer-logo span {
+
     color: var(--ivory);
+
 }
+
+
 
 .footer h2 {
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 35px;
+
     font-weight: 400;
+
     color: var(--gold);
+
 }
+
+
 
 .footer p {
+
     margin-top: 15px;
+
     font-size: 14px;
+
 }
+
+
 
 .footer-date {
+
     color: var(--gold);
+
     letter-spacing: 3px;
+
     font-size: 11px !important;
+
 }
+
+
 
 .footer-dua {
+
     color: var(--muted);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-style: italic;
+
     line-height: 1.8;
+
 }
+
+
 
 .copyright {
+
     color: var(--muted);
+
     font-size: 11px !important;
+
     margin-top: 35px !important;
+
 }
 
 
+
+
+
 /* =========================================
+
    12. COUNTDOWN
+
 ========================================= */
+
+
 
 .countdown {
+
     display: flex;
+
     gap: 25px;
+
     margin-top: 30px;
+
 }
+
+
 
 .countdown-item {
+
     text-align: center;
+
     min-width: 55px;
+
 }
+
+
 
 .countdown-item span {
+
     display: block;
+
     color: var(--gold);
+
     font-family: 'Playfair Display', Georgia, serif;
+
     font-size: 32px;
+
 }
 
+
+
 .countdown-item p {
+
     color: var(--ivory);
+
     font-size: 10px;
+
     letter-spacing: 2px;
+
     margin-top: 8px;
+
 }
+
+
+
 
 
 /* =========================================
+
    13. MOBILE RESPONSIVE DESIGN
+
 ========================================= */
+
+
 
 @media (max-width: 900px) {
 
+
+
     .location-container {
+
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
     }
 
+
+
 }
+
+
 
 @media (max-width: 768px) {
 
+
+
     .navbar {
+
         flex-wrap: wrap;
+
         padding: 18px 5%;
+
         gap: 15px;
+
     }
+
+
 
     .nav-links {
+
         width: 100%;
+
         order: 3;
+
         justify-content: center;
+
         flex-wrap: wrap;
+
         gap: 15px;
+
     }
+
+
 
     .nav-links a {
+
         font-size: 11px;
+
     }
+
+
 
     .nav-date {
+
         font-size: 10px;
+
     }
+
+
 
     .hero {
+
         min-height: 85vh;
+
         padding: 55px 7%;
+
         background-position: 60% center;
+
     }
+
+
 
     .hero-overlay {
+
         background: linear-gradient(
+
             90deg,
-            rgba(17, 23, 16, 0.94),
-            rgba(17, 23, 16, 0.65)
+
+            rgba(19, 13, 23, 0.94),
+
+            rgba(32, 21, 34, 0.65)
+
         );
+
     }
+
+
 
     .couple-names {
+
         font-size: 58px;
+
     }
+
+
 
     .couple-names span {
+
         font-size: 40px;
+
     }
+
+
 
     .hero-description {
+
         font-size: 17px;
+
     }
+
+
 
     .hero-date {
+
         font-size: 11px;
+
         letter-spacing: 2px;
+
     }
+
+
 
     .hero-button {
+
         padding: 15px;
+
         font-size: 9px;
+
     }
+
+
 
     .scroll-indicator {
+
         bottom: 15px;
+
         left: 7%;
+
         right: auto;
+
     }
+
+
 
     section:not(.hero) {
+
         padding: 75px 7%;
+
     }
+
+
 
     section h2 {
+
         font-size: 35px;
+
     }
+
+
 
     .bismillah {
+
         font-size: 29px;
+
     }
+
+
 
     .quran-arabic {
+
         font-size: 24px;
+
     }
+
+
 
     .quran-translation {
+
         font-size: 16px;
+
     }
+
+
 
     .couple-intro {
+
         flex-direction: column;
+
         gap: 25px;
+
     }
+
+
 
     .couple-intro h3 {
+
         font-size: 28px;
+
     }
+
+
 
     .ampersand {
+
         font-size: 35px;
+
     }
+
+
 
     .story-image img {
+
         height: 280px;
+
     }
+
+
 
     .events-container {
+
         grid-template-columns: 1fr;
+
     }
+
+
 
     .event-card {
+
         padding: 40px 25px;
+
     }
+
+
 
     .event-card h3 {
+
         font-size: 29px;
+
     }
+
+
 
     .gallery {
+
         grid-template-columns: 1fr;
+
         gap: 18px;
+
     }
+
+
 
     .gallery-item img {
+
         height: 300px;
+
     }
+
+
 
     .countdown {
+
         gap: 18px;
+
     }
+
+
 
     .countdown-item {
+
         min-width: 45px;
+
     }
+
+
 
     .countdown-item span {
+
         font-size: 27px;
+
     }
+
+
 
     .footer h2 {
+
         font-size: 28px;
+
     }
+
+
 
     .location-container {
+
         grid-template-columns: 1fr;
+
     }
+
+
 
     .location-card {
+
         padding: 35px 20px;
+
     }
 
+
+
     .location-card h3 {
+
         font-size: 27px;
+
     }
+
+
 
 }
 
 
+
+
+
 /* =========================================
+
    14. SMALL MOBILE SCREENS
+
 ========================================= */
+
+
 
 @media (max-width: 400px) {
 
+
+
     .couple-names {
+
         font-size: 46px;
+
     }
+
+
 
     .hero-subtitle {
+
         font-size: 21px;
+
     }
+
+
 
     .hero-small-text {
+
         letter-spacing: 2px;
+
         font-size: 9px;
+
     }
+
+
 
     .nav-links {
+
         gap: 10px;
+
     }
+
+
 
     .countdown {
+
         gap: 12px;
+
     }
+
+
 
     .countdown-item span {
+
         font-size: 24px;
+
     }
+
+
 
     .quran-arabic {
+
         font-size: 21px;
+
     }
+
+
 
     .bismillah {
+
         font-size: 25px;
+
     }
+
+
 
     .qr-frame {
+
         width: 160px;
+
         height: 160px;
+
     }
 
+
+
     .location-card h3 {
+
         font-size: 25px;
+
     }
+
+
 
 }
